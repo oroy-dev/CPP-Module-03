@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/03 20:33:38 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 22:55:10 by olivierroy       ###   ########.fr       */
+/*   Created: 2024/02/02 19:46:26 by olivierroy        #+#    #+#             */
+/*   Updated: 2024/02/03 23:32:27 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#include "FragTrap.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int	main(void)
 {
-public:
+	ClapTrap	olivier("olivier");
+	FragTrap	random;
+	FragTrap	ziggy("ziggy");
+	FragTrap	cop(ziggy);
 
-	ScavTrap(void);
-	ScavTrap(std::string _name);
-	ScavTrap(ScavTrap const &src);
-	~ScavTrap(void);
+	ziggy.attack("Random");
+	random.takeDamage(20);
+	random.highFivesGuys();
 
-	ScavTrap	&operator=(ScavTrap const &rhs);
+	for (int i = 0; i < 6; i++)
+		ziggy.beRepaired(5);
 
-	void		attack(const std::string& target);
-	void		guardGate(void);
+	ziggy.beRepaired(100);
+	olivier.attack("ziggy");
+	ziggy.takeDamage(0);
 
-};
-
-#endif
+	return (0);
+}

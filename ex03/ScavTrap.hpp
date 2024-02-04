@@ -6,7 +6,7 @@
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:33:38 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 22:55:10 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/04 00:07:03 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 public:
 
