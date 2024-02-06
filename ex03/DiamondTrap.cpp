@@ -14,7 +14,7 @@
 
 DiamondTrap::DiamondTrap(void) : ClapTrap("random")
 {
-	_name = ClapTrap::_name;
+	_name = ClapTrap::_name + "_clap_name";
 	_hitpoints = FragTrap::_hitpoints;
 	_energypoints = ScavTrap::_energypoints;
 	_attackdamage = FragTrap::_attackdamage;
@@ -24,7 +24,7 @@ DiamondTrap::DiamondTrap(void) : ClapTrap("random")
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name)
 {
-	_name = ClapTrap::_name;
+	_name = ClapTrap::_name + "_clap_name";
 	_hitpoints = FragTrap::_hitpoints;
 	_energypoints = ScavTrap::_energypoints;
 	_attackdamage = FragTrap::_attackdamage;

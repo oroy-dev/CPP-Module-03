@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 23:04:07 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/06 16:32:42 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate(void)
 {
+	std::cout << std::endl;
 	std::cout << "ScavTrap " << _name << " entered gate keeper mode!!!" << std::endl;
 }
