@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.cpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 23:10:45 by olivierroy       ###   ########.fr       */
+/*   Created: 2024/02/06 19:13:30 by olivierroy        #+#    #+#             */
+/*   Updated: 2024/02/06 19:30:05 by olivierroy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : ClapTrap("random")
+DiamondTrap::DiamondTrap(void)
 {
-	_name = ClapTrap::_name + "_clap_name";
+	_name = "random";
+	ClapTrap::_name = "random_clap_name";
 	_hitpoints = FragTrap::_hitpoints;
 	_energypoints = ScavTrap::_energypoints;
 	_attackdamage = FragTrap::_attackdamage;
@@ -22,9 +23,10 @@ DiamondTrap::DiamondTrap(void) : ClapTrap("random")
 	return ;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name)
+DiamondTrap::DiamondTrap(std::string name)
 {
-	_name = ClapTrap::_name + "_clap_name";
+	_name = name;
+	ClapTrap::_name = name + "_clap_name";
 	_hitpoints = FragTrap::_hitpoints;
 	_energypoints = ScavTrap::_energypoints;
 	_attackdamage = FragTrap::_attackdamage;
