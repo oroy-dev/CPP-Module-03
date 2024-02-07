@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:46:26 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 23:32:27 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/07 16:12:33 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ int	main(void)
 	FragTrap	cop(ziggy);
 
 	ziggy.attack("Random");
-	random.takeDamage(20);
+	random.takeDamage(30);
 	random.highFivesGuys();
 
-	for (int i = 0; i < 6; i++)
-		ziggy.beRepaired(5);
-
-	ziggy.beRepaired(100);
+	ziggy.takeDamage(100);
+	ziggy.beRepaired(20);
 	olivier.attack("ziggy");
 	ziggy.takeDamage(0);
 

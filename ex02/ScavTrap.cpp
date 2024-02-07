@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 23:07:27 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/07 16:04:02 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ ScavTrap::ScavTrap(std::string name)
 ScavTrap::ScavTrap(ScavTrap const &src)
 {
 	*this = src;
+	_name += "_copy";
 	std::cout << "ScavTrap " << _name << " created by copy" << std::endl;
 	return ;
 }

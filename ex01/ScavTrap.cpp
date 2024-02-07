@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/06 16:32:42 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/07 15:33:11 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ ScavTrap::ScavTrap(std::string name)
 ScavTrap::ScavTrap(ScavTrap const &src)
 {
 	*this = src;
+	_name += "_copy";
 	std::cout << "ScavTrap " << _name << " created by copy" << std::endl;
 	return ;
 }

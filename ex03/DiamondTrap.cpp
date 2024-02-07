@@ -12,9 +12,10 @@
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : ClapTrap("random")
+DiamondTrap::DiamondTrap(void)
 {
-	_name = ClapTrap::_name + "_clap_name";
+	_name = "random";
+	ClapTrap::_name = "random_clap_name";
 	_hitpoints = FragTrap::_hitpoints;
 	_energypoints = ScavTrap::_energypoints;
 	_attackdamage = FragTrap::_attackdamage;
@@ -22,9 +23,10 @@ DiamondTrap::DiamondTrap(void) : ClapTrap("random")
 	return ;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name)
+DiamondTrap::DiamondTrap(std::string name)
 {
-	_name = ClapTrap::_name + "_clap_name";
+	_name = name;
+	ClapTrap::_name = _name + "_clap_name";
 	_hitpoints = FragTrap::_hitpoints;
 	_energypoints = ScavTrap::_energypoints;
 	_attackdamage = FragTrap::_attackdamage;
@@ -35,6 +37,8 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name)
 DiamondTrap::DiamondTrap(DiamondTrap const &src)
 {
 	*this = src;
+	_name += "_copy";
+	ClapTrap::_name = _name + "_clap_name";
 	std::cout << "DiamondTrap " << _name << " created by copy" << std::endl;
 	return ;
 }
@@ -61,6 +65,9 @@ void	DiamondTrap::attack(const std::string& target)
 
 void	DiamondTrap::whoAmI(void)
 {
+	std::cout << std::endl;
 	std::cout << "DiamondTrap name = " << _name << std::endl;
 	std::cout << "ClapTrap name = " << ClapTrap::_name << std::endl;
+	std::cout << std::endl;
+	std::cout << "-------------------------------" << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 23:10:45 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/07 16:13:12 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ FragTrap::FragTrap(std::string name)
 FragTrap::FragTrap(FragTrap const &src)
 {
 	*this = src;
+	_name += "_copy";
 	std::cout << "FragTrap " << _name << " created by copy" << std::endl;
 	return ;
 }

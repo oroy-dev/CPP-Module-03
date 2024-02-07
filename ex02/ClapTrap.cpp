@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olivierroy <olivierroy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:46:24 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/03 22:46:35 by olivierroy       ###   ########.fr       */
+/*   Updated: 2024/02/07 16:04:10 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energypoint
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
 	*this = src;
+	_name += "_copy";
 	std::cout << "ClapTrap " << _name << " created by copy" << std::endl;
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:46:24 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/06 14:12:38 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/07 16:04:19 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energypoint
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
 	*this = src;
+	_name += "_copy";
 	std::cout << "ClapTrap " << _name << " created by copy" << std::endl;
 	return ;
 }
@@ -66,16 +67,6 @@ void	ClapTrap::attack(const std::string& target)
 	std::cout << "-------------------------------" << std::endl;
 }
 
-void	ClapTrap::takeDamage(unsigned int amount)
-{
-	std::cout << std::endl;
-	std::cout << "ClapTrap " << _name << " takes " << amount << " damage points! " << std::endl;
-	_hitpoints -= amount;
-	printStatus();
-	std::cout << std::endl;
-	std::cout << "-------------------------------" << std::endl;
-}
-
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	std::cout << std::endl;
@@ -92,6 +83,16 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout << "ClapTrap " << _name << " tries to repair itself, but forgot it can't since the thing is dead." << std::endl;
+	printStatus();
+	std::cout << std::endl;
+	std::cout << "-------------------------------" << std::endl;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	std::cout << std::endl;
+	std::cout << "ClapTrap " << _name << " takes " << amount << " damage points! " << std::endl;
+	_hitpoints -= amount;
 	printStatus();
 	std::cout << std::endl;
 	std::cout << "-------------------------------" << std::endl;
