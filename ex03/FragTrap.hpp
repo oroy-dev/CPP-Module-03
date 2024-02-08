@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:33:38 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/07 17:04:27 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/08 13:54:11 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ public:
 
 	void		attack(const std::string& target);
 	void		highFivesGuys(void);
+
+	int			getHitPoints(void) const;
+	int			getAttackDamage(void) const;
 
 };
 

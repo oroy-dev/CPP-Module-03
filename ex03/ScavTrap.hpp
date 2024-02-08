@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:33:38 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/07 17:04:22 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/08 13:53:35 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ public:
 
 	void		attack(const std::string& target);
 	void		guardGate(void);
+
+	int			getEnergyPoints(void) const;
 
 };
 

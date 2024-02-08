@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/07 16:51:25 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/08 14:30:00 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,9 @@ void	ScavTrap::attack(const std::string& target)
 void	ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap " << _name << " entered gate keeper mode!!!" << std::endl;
+}
+
+int	ScavTrap::getEnergyPoints(void) const
+{
+	return (50);
 }

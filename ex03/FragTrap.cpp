@@ -6,7 +6,7 @@
 /*   By: oroy <oroy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 20:34:27 by olivierroy        #+#    #+#             */
-/*   Updated: 2024/02/07 16:13:12 by oroy             ###   ########.fr       */
+/*   Updated: 2024/02/08 14:33:31 by oroy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,14 @@ void	FragTrap::attack(const std::string& target)
 void	FragTrap::highFivesGuys(void)
 {
 	std::cout << "FragTrap " << _name << " does a high five to the evaluator!!!" << std::endl;
+}
+
+int	FragTrap::getHitPoints(void) const
+{
+	return (100);
+}
+
+int	FragTrap::getAttackDamage(void) const
+{
+	return (30);
 }
